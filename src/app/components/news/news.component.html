@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-form-field class="search">
+        <input [formControl]="searchString" matInput placeholder="Search">
+    </mat-form-field>
+
+    <mat-card *ngFor="let item of news" class="item-wrapper">
+        <mat-card-title class="title">{{item.title}}</mat-card-title>
+        <mat-card-content class="body">{{item.body}}</mat-card-content>
+        <mat-card-actions class="buttons-wrapper">
+            <button [routerLink]="[item.id]" mat-button color="primary">редактировать</button>
+            <button (click)="openDialog(item.id)" mat-button color="primary">удалить</button>
+        </mat-card-actions>
+    </mat-card>
+</mat-card>

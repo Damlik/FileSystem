@@ -1,0 +1,13 @@
+<form [formGroup]="updateNewsForm" class="form-wrapper">
+    <mat-card class="form">
+        <mat-form-field>
+            <input formControlName="title" matInput placeholder="Title">
+        </mat-form-field>
+        <mat-form-field>
+            <input formControlName="body" matInput placeholder="Body">
+        </mat-form-field>
+        <mat-card-actions class="margin">
+            <button [disabled]="updateNewsForm.invalid" (click)="openDialog()" mat-raised-button color="primary">Update News</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

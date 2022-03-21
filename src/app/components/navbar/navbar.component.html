@@ -1,0 +1,9 @@
+<mat-card *ngIf="checkAuth()" class="navbar-wrapper">
+    <mat-card-actions>
+        <button routerLink="/news" mat-button color="primary">News</button>
+    </mat-card-actions>
+    <mat-card-actions class="login-menu">
+        <span>Пользователь: Admin</span>
+        <button mat-button color="primary" (click)="Exit()">Выйти</button>
+    </mat-card-actions>
+</mat-card>
